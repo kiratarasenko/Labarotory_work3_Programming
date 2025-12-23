@@ -1,3 +1,3 @@
 public interface PickUp {
-    public void pickBy(Character character);
+    void pickBy(Character character);
 }
