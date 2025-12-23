@@ -12,16 +12,18 @@ public class Main {
         Grass grass = new Grass((int) (Math.random() * 10));
         ArrayList<PickUp> objects = new ArrayList<>();
 
-        String colors[] = {
+        String[] colors = {
                 "красный", "белый", "желтый", "голубой"
         };
-        FlowerType flowers[] = {
+        FlowerType[] flowers = {
                 FlowerType.ROSE, FlowerType.DAISY, FlowerType.TULIP
         };
         for (int i = (int) (Math.random() * 10); i > 0; i--)
             objects.add(new Flower(colors[(int) (Math.random() * colors.length)], flowers[(int) (Math.random() * flowers.length)]));
         for (int i = (int) (Math.random() * 10); i > 0; i--)
             objects.add(new Rock((int) (Math.random() * 10)));
+        for (int i = (int) (Math.random() * 10); i > 0; i--)
+            objects.add(new Acorn("ghh"));
        //objects.removeAll(objects);//
         System.out.println(tree);
         gnome.lookAt(lake);

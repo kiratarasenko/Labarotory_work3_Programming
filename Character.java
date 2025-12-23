@@ -32,7 +32,7 @@ public abstract class Character {
 
         }
         if (lake.depth() > 5) {
-            System.out.println(" и испугался его глубины.");
+            System.out.println("испугался его глубины.");
             this.setEmotion(Emotion.SCARE);
         }
 

@@ -45,7 +45,7 @@ public class Goose extends Character {
     }
 
     public void give(Character whom) {
-        System.out.printf("%s передает %s %s.\n", name, currentObject.toString(), whom.name);
+        System.out.printf("%s передает %s.%s получает %s.\n", name, currentObject.toString(), whom.name, currentObject);
 
         whom.currentObject = currentObject;
         currentObject = null;
