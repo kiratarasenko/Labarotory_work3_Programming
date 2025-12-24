@@ -19,4 +19,20 @@ public class Tree extends Decoration {
     public String toString() {
         return String.format("%s дерево, возрастом %s лет", color, age);
     }
+
+    @Override
+    public int hashCode() {
+        return (Double.hashCode(age) + color.hashCode());
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other)
+            return true;
+        if (other == null || getClass() != other.getClass() || this.hashCode() != other.hashCode()) {
+            return false;
+        }
+        Tree obj = (Tree) other;
+        return size == obj.size && color.equals(obj.color) && age == obj.age;
+    }
 }

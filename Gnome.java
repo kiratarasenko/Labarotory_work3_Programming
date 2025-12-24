@@ -2,6 +2,7 @@ public class Gnome extends Character {
     Gnome() {
         super("Карлик", Emotion.NORMAL);
     }
+
     public void say(String message) {
         switch (emotion) {
             case NORMAL:

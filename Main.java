@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class Main {
-    static double MIN_AGE = 0;
-    static double MAX_AGE = 1000;
+    static final double MIN_AGE = 0;
+    static final double MAX_AGE = 1000;
 
     public static void main(String[] args) {
         Goose goose = new Goose();
@@ -24,7 +24,7 @@ public class Main {
             objects.add(new Rock((int) (Math.random() * 10)));
         for (int i = (int) (Math.random() * 10); i > 0; i--)
             objects.add(new Acorn("ghh"));
-       //objects.removeAll(objects);//
+        //objects.removeAll(objects);//
         System.out.println(tree);
         gnome.lookAt(lake);
 

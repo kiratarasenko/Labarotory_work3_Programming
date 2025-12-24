@@ -37,12 +37,26 @@ public abstract class Character {
         }
 
     }
-    public void stop(){
+
+    public void stop() {
         System.out.println(name + " остановилась.");
     }
 
     @Override
     public String toString() {
-        return String.format("%s ", name );
+        return String.format("%s ", name);
+    }
+
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other)
+            return true;
+        if (other == null || getClass() != other.getClass() || this.hashCode() != other.hashCode()) {
+            return false;
+        }
+
+        Character obj = (Character) other;
+        return name.equals(obj.name) && this.emotion == obj.emotion;
     }
 }
